@@ -26,6 +26,7 @@ export const Navbar = () => {
   const navLinks = [
     { title: "Home", path: "/" },
     { title: "Programs", path: "/programs" },
+    { title: "Blog", path: "/blog" },
     { title: "Book a Training", path: "/booking" },
     { title: "Contact", path: "/contact" },
   ];
@@ -34,8 +35,8 @@ export const Navbar = () => {
     <nav 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled 
-          ? 'bg-white/80 backdrop-blur-md shadow-sm py-3' 
-          : 'bg-transparent py-5'
+          ? 'bg-white/90 backdrop-blur-md shadow-sm py-3' 
+          : 'bg-white py-5'
       }`}
     >
       <div className="container mx-auto flex items-center justify-between px-4">
@@ -57,8 +58,8 @@ export const Navbar = () => {
                   to={link.path}
                   className={`subtle-underline px-1 py-2 text-sm font-medium transition-colors ${
                     location.pathname === link.path
-                      ? 'text-tech-700'
-                      : 'text-gray-600 hover:text-tech-600'
+                      ? 'text-violet-700'
+                      : 'text-gray-600 hover:text-violet-600'
                   }`}
                 >
                   {link.title}
@@ -69,7 +70,7 @@ export const Navbar = () => {
           <LanguageSelector />
           <Link 
             to="/booking" 
-            className="rounded-full bg-tech-600 px-5 py-2 text-sm font-medium text-white transition-all hover:bg-tech-700 hover:shadow-md"
+            className="rounded-full bg-violet-600 px-5 py-2 text-sm font-medium text-white transition-all hover:bg-violet-700 hover:shadow-md"
           >
             Book Now
           </Link>
@@ -99,7 +100,7 @@ export const Navbar = () => {
                   to={link.path}
                   className={`block py-2 text-base font-medium ${
                     location.pathname === link.path
-                      ? 'text-tech-700'
+                      ? 'text-violet-700'
                       : 'text-gray-600'
                   }`}
                 >
@@ -116,7 +117,7 @@ export const Navbar = () => {
             <li>
               <Link 
                 to="/booking" 
-                className="mt-2 block w-full rounded-full bg-tech-600 px-5 py-2.5 text-center text-base font-medium text-white transition-all hover:bg-tech-700"
+                className="mt-2 block w-full rounded-full bg-violet-600 px-5 py-2.5 text-center text-base font-medium text-white transition-all hover:bg-violet-700"
               >
                 Book Now
               </Link>
