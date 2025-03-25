@@ -26,6 +26,7 @@ export const Navbar = () => {
   const navLinks = [
     { title: "Home", path: "/" },
     { title: "Programs", path: "/programs" },
+    { title: "AI Tools", path: "/ai-tools" },
     { title: "Blog", path: "/blog" },
     { title: "Book a Training", path: "/booking" },
     { title: "Contact", path: "/contact" },

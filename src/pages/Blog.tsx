@@ -88,8 +88,8 @@ const Blog = () => {
     <div className="min-h-screen bg-gray-50">
       <Navbar />
       
-      {/* Header */}
-      <section className="bg-gradient-to-r from-violet-700 via-fuchsia-500 to-pink-500 py-20 text-white">
+      {/* Header - Updated with lighter, more subtle colors */}
+      <section className="bg-gradient-to-r from-blue-100 via-purple-100 to-pink-100 py-20 text-gray-800">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="heading-1 mb-4">TechinTeach Blog</h1>
