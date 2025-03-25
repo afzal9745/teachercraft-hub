@@ -15,8 +15,8 @@ export const ProgramCard = ({ title, description, icon, slug, featured = false }
     <div 
       className={`relative overflow-hidden rounded-xl transition-all duration-300 hover:shadow-lg ${
         featured 
-          ? 'bg-gradient-to-br from-violet-600 to-fuchsia-600 text-white shadow-md hover:shadow-violet-200' 
-          : 'bg-white text-gray-900 border border-gray-100 hover:border-violet-200'
+          ? 'bg-gradient-to-br from-blue-600 to-cyan-500 text-white shadow-md hover:shadow-blue-200' 
+          : 'bg-white text-gray-900 border border-gray-100 hover:border-blue-200'
       }`}
     >
       {featured && (
@@ -31,7 +31,7 @@ export const ProgramCard = ({ title, description, icon, slug, featured = false }
         <div className={`mb-4 h-12 w-12 flex items-center justify-center rounded-full ${
           featured 
             ? 'bg-white/20 text-white' 
-            : 'bg-violet-100 text-violet-600'
+            : 'bg-blue-100 text-blue-600'
         }`}>
           {icon}
         </div>
@@ -49,7 +49,7 @@ export const ProgramCard = ({ title, description, icon, slug, featured = false }
           className={`inline-flex items-center gap-1 font-medium ${
             featured 
               ? 'text-white' 
-              : 'text-violet-600 hover:text-violet-700'
+              : 'text-blue-600 hover:text-blue-700'
           }`}
         >
           Learn more
