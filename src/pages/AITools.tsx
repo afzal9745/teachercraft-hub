@@ -100,8 +100,8 @@ const AITools = () => {
     <div className="min-h-screen bg-gray-50">
       <Navbar />
       
-      {/* Header */}
-      <section className="bg-gradient-to-r from-tech-100 via-tech-200 to-tech-300 py-20 text-gray-800">
+      {/* Header - Updated with subtle blue gradient */}
+      <section className="bg-gradient-to-r from-blue-100 via-blue-200 to-tech-200 py-20 text-gray-800">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="heading-1 mb-4">AI Tools for Educators</h1>
@@ -123,7 +123,7 @@ const AITools = () => {
                   onClick={() => setSelectedCategory(category)}
                   className={`px-4 py-1.5 rounded-full text-sm font-medium transition-colors ${
                     selectedCategory === category
-                      ? 'bg-tech-600 text-white'
+                      ? 'bg-blue-600 text-white'
                       : 'bg-white text-gray-700 hover:bg-gray-100'
                   }`}
                 >
@@ -142,7 +142,7 @@ const AITools = () => {
               placeholder="Search tools..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full pl-10 pr-4 py-2 rounded-full border border-gray-200 focus:outline-none focus:ring-2 focus:ring-tech-600 focus:border-transparent"
+              className="w-full pl-10 pr-4 py-2 rounded-full border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent"
             />
           </div>
         </div>

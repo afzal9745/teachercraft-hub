@@ -87,8 +87,8 @@ const Programs = () => {
     <div ref={pageRef} className="min-h-screen">
       <Navbar />
       
-      {/* Header */}
-      <section className="pt-28 pb-16 md:pt-32 md:pb-20 bg-gradient-to-b from-tech-50 to-white">
+      {/* Header - Updated with subtle blue gradient */}
+      <section className="pt-28 pb-16 md:pt-32 md:pb-20 bg-gradient-to-b from-blue-50 to-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="heading-1 mb-6 text-gray-900">
@@ -111,7 +111,7 @@ const Programs = () => {
                   key={category.value}
                   className={`rounded-full px-4 py-2 text-sm font-medium transition-colors ${
                     category.value === 'all'
-                      ? 'bg-tech-600 text-white'
+                      ? 'bg-blue-600 text-white'
                       : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                   }`}
                 >
@@ -131,13 +131,13 @@ const Programs = () => {
         </div>
       </section>
       
-      {/* Customized Training Section */}
+      {/* Customized Training Section - Updated with subtle blue */}
       <section className="py-16 px-4 bg-gradient-to-b from-white to-gray-50">
         <div className="container mx-auto">
           <div className="max-w-3xl mx-auto">
-            <div className="rounded-2xl bg-tech-50 border border-tech-100 p-8 text-center">
-              <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-tech-100">
-                <School size={28} className="text-tech-700" />
+            <div className="rounded-2xl bg-blue-50 border border-blue-100 p-8 text-center">
+              <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-blue-100">
+                <School size={28} className="text-blue-700" />
               </div>
               
               <h2 className="text-2xl font-bold mb-4">Need a Customized Training Program?</h2>
@@ -147,7 +147,7 @@ const Programs = () => {
               
               <a
                 href="/contact"
-                className="inline-flex items-center justify-center rounded-full bg-tech-600 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-tech-700"
+                className="inline-flex items-center justify-center rounded-full bg-blue-600 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-blue-700"
               >
                 Contact Us to Discuss
               </a>

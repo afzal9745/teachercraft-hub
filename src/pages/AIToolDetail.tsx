@@ -12,7 +12,7 @@ const AIToolDetail = () => {
       <Navbar />
       
       <div className="container mx-auto px-4 py-12 pt-24">
-        <Link to="/ai-tools" className="inline-flex items-center gap-2 text-tech-700 hover:text-tech-900 mb-6">
+        <Link to="/ai-tools" className="inline-flex items-center gap-2 text-blue-700 hover:text-blue-900 mb-6">
           <ArrowLeft size={18} />
           <span>Back to AI Tools</span>
         </Link>

@@ -117,7 +117,7 @@ const Index = () => {
         <div className="container mx-auto">
           <div className="max-w-3xl mx-auto text-center mb-12">
             <div className="mb-4 flex justify-center">
-              <span className="inline-flex items-center gap-1.5 rounded-full bg-violet-100 px-3 py-1 text-sm font-medium text-violet-700">
+              <span className="inline-flex items-center gap-1.5 rounded-full bg-blue-100 px-3 py-1 text-sm font-medium text-blue-700">
                 <BadgeCheck size={16} />
                 CPD Accredited Programs
               </span>
@@ -141,7 +141,7 @@ const Index = () => {
           <div className="mt-12 text-center">
             <Link
               to="/programs"
-              className="inline-flex items-center gap-2 text-violet-600 hover:text-violet-700 font-medium"
+              className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-medium"
             >
               View all training programs
               <ArrowRight size={16} />
@@ -150,10 +150,10 @@ const Index = () => {
         </div>
       </section>
       
-      {/* AI Focus Section */}
+      {/* AI Focus Section - Updated with more subtle gradient */}
       <section 
         ref={(el) => (sectionsRef.current[1] = el)} 
-        className="section-padding bg-gradient-to-r from-violet-600 via-fuchsia-600 to-pink-500 text-white opacity-0"
+        className="section-padding bg-gradient-to-r from-blue-600 via-tech-600 to-tech-500 text-white opacity-0"
       >
         <div className="container mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
@@ -173,7 +173,7 @@ const Index = () => {
                   "Stay ahead with the latest AI trends in education"
                 ].map((item, index) => (
                   <li key={index} className="flex items-start gap-3">
-                    <CheckCircle className="mt-1 h-5 w-5 flex-shrink-0 text-pink-300" />
+                    <CheckCircle className="mt-1 h-5 w-5 flex-shrink-0 text-blue-300" />
                     <span>{item}</span>
                   </li>
                 ))}
@@ -181,7 +181,7 @@ const Index = () => {
               <div className="mt-8">
                 <Link
                   to="/programs/ai-teaching"
-                  className="rounded-full bg-white px-6 py-3 text-violet-700 font-medium transition-all hover:shadow-lg inline-flex items-center gap-2"
+                  className="rounded-full bg-white px-6 py-3 text-blue-700 font-medium transition-all hover:shadow-lg inline-flex items-center gap-2"
                 >
                   Explore AI Courses
                   <ArrowRight size={16} />
@@ -191,7 +191,7 @@ const Index = () => {
             <div className="rounded-xl bg-white/10 p-6 backdrop-blur-sm border border-white/20">
               <div className="mb-6 flex items-center gap-4">
                 <div className="rounded-full bg-white p-3">
-                  <Cpu className="h-6 w-6 text-violet-600" />
+                  <Cpu className="h-6 w-6 text-blue-600" />
                 </div>
                 <h3 className="text-xl font-bold">
                   Teaching Strategies with AI
@@ -242,7 +242,7 @@ const Index = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="glass-card rounded-xl p-6 transition-transform hover:scale-[1.02]">
-              <div className="mb-4 h-12 w-12 flex items-center justify-center rounded-full bg-violet-100 text-violet-700">
+              <div className="mb-4 h-12 w-12 flex items-center justify-center rounded-full bg-blue-100 text-blue-700">
                 <Globe size={24} />
               </div>
               <h3 className="text-xl font-bold mb-2">Global Standards</h3>
@@ -252,7 +252,7 @@ const Index = () => {
             </div>
             
             <div className="glass-card rounded-xl p-6 transition-transform hover:scale-[1.02]">
-              <div className="mb-4 h-12 w-12 flex items-center justify-center rounded-full bg-violet-100 text-violet-700">
+              <div className="mb-4 h-12 w-12 flex items-center justify-center rounded-full bg-blue-100 text-blue-700">
                 <Users size={24} />
               </div>
               <h3 className="text-xl font-bold mb-2">Expert Trainers</h3>
@@ -262,7 +262,7 @@ const Index = () => {
             </div>
             
             <div className="glass-card rounded-xl p-6 transition-transform hover:scale-[1.02]">
-              <div className="mb-4 h-12 w-12 flex items-center justify-center rounded-full bg-violet-100 text-violet-700">
+              <div className="mb-4 h-12 w-12 flex items-center justify-center rounded-full bg-blue-100 text-blue-700">
                 <BadgeCheck size={24} />
               </div>
               <h3 className="text-xl font-bold mb-2">CPD Accredited</h3>
@@ -300,7 +300,7 @@ const Index = () => {
           <div className="mt-12 text-center">
             <Link
               to="/testimonials"
-              className="inline-flex items-center gap-2 text-violet-600 hover:text-violet-700 font-medium"
+              className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-medium"
             >
               Read more testimonials
               <ArrowRight size={16} />
@@ -309,16 +309,16 @@ const Index = () => {
         </div>
       </section>
       
-      {/* CTA Section */}
+      {/* CTA Section - Updated with subtle blue gradient */}
       <section 
         ref={(el) => (sectionsRef.current[4] = el)} 
-        className="section-padding bg-violet-700 opacity-0"
+        className="section-padding bg-blue-700 opacity-0"
       >
         <div className="container mx-auto">
-          <div className="rounded-2xl bg-gradient-to-r from-violet-800 to-violet-700 p-8 md:p-12 lg:p-16 relative overflow-hidden shadow-xl">
+          <div className="rounded-2xl bg-gradient-to-r from-blue-800 to-blue-700 p-8 md:p-12 lg:p-16 relative overflow-hidden shadow-xl">
             {/* Decorative elements */}
-            <div className="absolute top-0 right-0 w-64 h-64 rounded-full bg-violet-500/10 transform translate-x-1/3 -translate-y-1/3"></div>
-            <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-violet-600/10 transform -translate-x-1/3 translate-y-1/3"></div>
+            <div className="absolute top-0 right-0 w-64 h-64 rounded-full bg-blue-500/10 transform translate-x-1/3 -translate-y-1/3"></div>
+            <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-blue-600/10 transform -translate-x-1/3 translate-y-1/3"></div>
             
             <div className="relative z-10 text-center">
               <div className="mb-4 inline-flex items-center gap-1.5 rounded-full bg-white/20 px-3 py-1 text-sm font-medium backdrop-blur-sm">
@@ -328,21 +328,21 @@ const Index = () => {
               <h2 className="heading-2 mb-4 text-white">
                 Ready to Transform Your Teaching?
               </h2>
-              <p className="text-violet-100 text-lg max-w-2xl mx-auto mb-8">
+              <p className="text-blue-100 text-lg max-w-2xl mx-auto mb-8">
                 Book a custom training session for your school or join one of our upcoming online programs to elevate your teaching skills.
               </p>
               
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <Link
                   to="/booking"
-                  className="w-full sm:w-auto flex items-center justify-center gap-2 rounded-full bg-white text-violet-700 px-8 py-3 font-medium transition-all hover:bg-gray-100"
+                  className="w-full sm:w-auto flex items-center justify-center gap-2 rounded-full bg-white text-blue-700 px-8 py-3 font-medium transition-all hover:bg-gray-100"
                 >
                   Book a Training
                   <Calendar size={16} />
                 </Link>
                 <Link
                   to="/contact"
-                  className="w-full sm:w-auto flex items-center justify-center gap-2 rounded-full bg-violet-600 text-white px-8 py-3 font-medium transition-all hover:bg-violet-500"
+                  className="w-full sm:w-auto flex items-center justify-center gap-2 rounded-full bg-blue-600 text-white px-8 py-3 font-medium transition-all hover:bg-blue-500"
                 >
                   Contact Us
                   <ArrowRight size={16} />
@@ -370,7 +370,7 @@ const Index = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="glass-card rounded-xl p-6 flex items-center gap-4 transition-all hover:shadow-md">
-              <div className="h-14 w-14 flex items-center justify-center rounded-full bg-violet-100 text-violet-700 flex-shrink-0">
+              <div className="h-14 w-14 flex items-center justify-center rounded-full bg-blue-100 text-blue-700 flex-shrink-0">
                 <Award size={28} />
               </div>
               <div>
@@ -382,7 +382,7 @@ const Index = () => {
             </div>
             
             <div className="glass-card rounded-xl p-6 flex items-center gap-4 transition-all hover:shadow-md">
-              <div className="h-14 w-14 flex items-center justify-center rounded-full bg-violet-100 text-violet-700 flex-shrink-0">
+              <div className="h-14 w-14 flex items-center justify-center rounded-full bg-blue-100 text-blue-700 flex-shrink-0">
                 <Award size={28} />
               </div>
               <div>
@@ -394,7 +394,7 @@ const Index = () => {
             </div>
             
             <div className="glass-card rounded-xl p-6 flex items-center gap-4 transition-all hover:shadow-md">
-              <div className="h-14 w-14 flex items-center justify-center rounded-full bg-violet-100 text-violet-700 flex-shrink-0">
+              <div className="h-14 w-14 flex items-center justify-center rounded-full bg-blue-100 text-blue-700 flex-shrink-0">
                 <Award size={28} />
               </div>
               <div>
@@ -406,7 +406,7 @@ const Index = () => {
             </div>
             
             <div className="glass-card rounded-xl p-6 flex items-center gap-4 transition-all hover:shadow-md">
-              <div className="h-14 w-14 flex items-center justify-center rounded-full bg-violet-100 text-violet-700 flex-shrink-0">
+              <div className="h-14 w-14 flex items-center justify-center rounded-full bg-blue-100 text-blue-700 flex-shrink-0">
                 <Award size={28} />
               </div>
               <div>
@@ -421,7 +421,7 @@ const Index = () => {
           <div className="mt-12 text-center">
             <Link
               to="/programs/certifications"
-              className="inline-flex items-center gap-2 text-violet-600 hover:text-violet-700 font-medium"
+              className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-medium"
             >
               Learn more about certification programs
               <ArrowRight size={16} />
