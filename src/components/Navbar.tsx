@@ -1,13 +1,15 @@
 
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Globe } from 'lucide-react';
+import { Menu, X, Globe, ChevronDown } from 'lucide-react';
 import { LanguageSelector } from './LanguageSelector';
+import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 export const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,12 +18,6 @@ export const Navbar = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  useEffect(() => {
-    setIsOpen(false);
-  }, [location]);
-
-  const toggleMenu = () => setIsOpen(!isOpen);
 
   const navLinks = [
     { title: "Home", path: "/" },
@@ -45,7 +41,7 @@ export const Navbar = () => {
           to="/" 
           className="flex items-center gap-2 transition-opacity hover:opacity-80"
         >
-          <span className="font-display text-2xl font-bold text-tech-700">
+          <span className="font-display text-xl md:text-2xl font-bold text-tech-700">
             Tech<span className="text-tech-500">in</span>Teach
           </span>
         </Link>
@@ -77,54 +73,63 @@ export const Navbar = () => {
           </Link>
         </div>
 
-        {/* Mobile Menu Button */}
-        <button 
-          className="rounded-md p-2 text-gray-700 md:hidden" 
-          onClick={toggleMenu}
-          aria-label="Toggle menu"
-        >
-          {isOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
-      </div>
-
-      {/* Mobile Menu */}
-      <div 
-        className={`absolute w-full transform bg-white shadow-md transition-transform duration-300 ease-in-out md:hidden ${
-          isOpen ? 'translate-y-0' : '-translate-y-full'
-        }`}
-      >
-        <div className="container mx-auto px-4 py-4">
-          <ul className="flex flex-col gap-4">
-            {navLinks.map((link) => (
-              <li key={link.path}>
-                <Link 
-                  to={link.path}
-                  className={`block py-2 text-base font-medium ${
-                    location.pathname === link.path
-                      ? 'text-blue-700'
-                      : 'text-gray-600'
-                  }`}
-                >
-                  {link.title}
-                </Link>
-              </li>
-            ))}
-            <li className="py-2">
-              <div className="flex items-center gap-2">
-                <Globe size={18} className="text-gray-500" />
-                <LanguageSelector />
-              </div>
-            </li>
-            <li>
-              <Link 
-                to="/booking" 
-                className="mt-2 block w-full rounded-full bg-blue-600 px-5 py-2.5 text-center text-base font-medium text-white transition-all hover:bg-blue-700"
+        {/* Mobile Menu */}
+        {isMobile && (
+          <Sheet>
+            <SheetTrigger asChild>
+              <button 
+                className="rounded-md p-2 text-gray-700 md:hidden" 
+                aria-label="Toggle menu"
               >
-                Book Now
-              </Link>
-            </li>
-          </ul>
-        </div>
+                <Menu size={24} />
+              </button>
+            </SheetTrigger>
+            <SheetContent side="right" className="w-[280px] sm:w-[350px] p-0">
+              <div className="flex flex-col h-full">
+                <div className="p-4 border-b">
+                  <Link 
+                    to="/" 
+                    className="flex items-center gap-2 transition-opacity hover:opacity-80"
+                  >
+                    <span className="font-display text-xl font-bold text-tech-700">
+                      Tech<span className="text-tech-500">in</span>Teach
+                    </span>
+                  </Link>
+                </div>
+                <div className="flex-1 overflow-auto py-6 px-4">
+                  <ul className="flex flex-col gap-4">
+                    {navLinks.map((link) => (
+                      <li key={link.path}>
+                        <Link 
+                          to={link.path}
+                          className={`block py-2 text-base font-medium ${
+                            location.pathname === link.path
+                              ? 'text-blue-700'
+                              : 'text-gray-600'
+                          }`}
+                        >
+                          {link.title}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="p-4 border-t mt-auto">
+                  <div className="flex items-center gap-2 mb-4">
+                    <Globe size={18} className="text-gray-500" />
+                    <LanguageSelector />
+                  </div>
+                  <Link 
+                    to="/booking" 
+                    className="block w-full rounded-full bg-blue-600 px-5 py-2.5 text-center text-base font-medium text-white transition-all hover:bg-blue-700"
+                  >
+                    Book Now
+                  </Link>
+                </div>
+              </div>
+            </SheetContent>
+          </Sheet>
+        )}
       </div>
     </nav>
   );
