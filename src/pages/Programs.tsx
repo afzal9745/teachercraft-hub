@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useState } from 'react';
 import { 
   Brain, 
   Laptop, 
@@ -27,14 +27,9 @@ import { Footer } from '@/components/Footer';
 import { Input } from '@/components/ui/input';
 
 const Programs = () => {
-  const pageRef = useRef<HTMLDivElement>(null);
   const [searchQuery, setSearchQuery] = useState('');
   const [activeCategory, setActiveCategory] = useState('all');
   
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
   // Training programs data
   const trainingPrograms = [
     {
@@ -184,7 +179,7 @@ const Programs = () => {
   });
 
   return (
-    <div ref={pageRef} className="min-h-screen">
+    <div className="min-h-screen">
       <Navbar />
       
       {/* Header - Updated with subtle blue gradient */}

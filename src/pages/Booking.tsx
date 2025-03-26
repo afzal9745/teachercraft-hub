@@ -1,5 +1,4 @@
-
-import { useEffect, useRef } from 'react';
+import { useRef } from 'react';
 import { 
   Calendar, 
   Users, 
@@ -15,10 +14,6 @@ import { Footer } from '@/components/Footer';
 
 const Booking = () => {
   const pageRef = useRef<HTMLDivElement>(null);
-  
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
 
   return (
     <div ref={pageRef} className="min-h-screen">
