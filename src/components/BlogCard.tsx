@@ -22,24 +22,19 @@ export const BlogCard = ({
   imageUrl = '/placeholder.svg',
 }: BlogCardProps) => {
   return (
-    <div className="group overflow-hidden rounded-xl bg-white shadow-md transition-all hover:shadow-lg">
+    <div className="group overflow-hidden rounded-lg bg-white shadow-sm transition-all hover:shadow-md">
       <div className="relative h-48 overflow-hidden">
         <img 
           src={imageUrl} 
           alt={title}
           className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
         />
-        <div className="absolute top-4 right-4">
-          <span className="pill bg-violet-600 text-white">
-            {category}
-          </span>
-        </div>
       </div>
       <div className="p-5">
-        <div className="mb-3 flex items-center gap-2 text-sm text-gray-600">
+        <div className="mb-2 flex items-center gap-2 text-sm text-gray-600">
           <span>{date}</span>
           <span>•</span>
-          <span>By {author}</span>
+          <span className="text-violet-600">{category}</span>
         </div>
         <h3 className="mb-2 text-xl font-bold text-gray-900 transition-colors group-hover:text-violet-700">
           {title}
