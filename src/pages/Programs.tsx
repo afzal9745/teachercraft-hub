@@ -1,5 +1,4 @@
-
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { 
   Brain, 
   Laptop, 
@@ -18,15 +17,19 @@ import {
   Smile,
   Code,
   Gamepad2,
-  Presentation
+  Presentation,
+  Search
 } from 'lucide-react';
 
 import { Navbar } from '@/components/Navbar';
 import { ProgramCard } from '@/components/ProgramCard';
 import { Footer } from '@/components/Footer';
+import { Input } from '@/components/ui/input';
 
 const Programs = () => {
   const pageRef = useRef<HTMLDivElement>(null);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [activeCategory, setActiveCategory] = useState('all');
   
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -83,7 +86,6 @@ const Programs = () => {
       icon: <Lightbulb size={24} />,
       slug: "adobe-creative"
     },
-    // New programs
     {
       title: "Digital Citizenship and Cyber Safety",
       description: "Equipping teachers to model and teach responsible and safe online behavior, from digital footprints to cyberbullying response.",
@@ -157,6 +159,30 @@ const Programs = () => {
     { name: "Teacher Development", value: "development" },
   ];
 
+  // Filter programs based on search query and active category
+  const filteredPrograms = trainingPrograms.filter(program => {
+    const matchesSearch = program.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
+                         program.description.toLowerCase().includes(searchQuery.toLowerCase());
+    
+    if (activeCategory === 'all') {
+      return matchesSearch;
+    }
+    
+    const categoryKeywords = {
+      'innovation': ['innovation', 'design', 'creative', 'thinking'],
+      'technology': ['technology', 'digital', 'online', 'tools', 'tech'],
+      'certification': ['certified', 'certification', 'ambassador', 'recognition'],
+      'development': ['skills', 'wellness', 'development', 'presentation'],
+    };
+    
+    const keywords = categoryKeywords[activeCategory as keyof typeof categoryKeywords] || [];
+    const matchesCategory = keywords.some(keyword => 
+      program.description.toLowerCase().includes(keyword)
+    );
+    
+    return matchesSearch && matchesCategory;
+  });
+
   return (
     <div ref={pageRef} className="min-h-screen">
       <Navbar />
@@ -178,16 +204,31 @@ const Programs = () => {
       {/* Programs Section */}
       <section className="py-12 px-4 md:py-16">
         <div className="container mx-auto">
+          {/* Search Input */}
+          <div className="max-w-md mx-auto mb-8">
+            <div className="relative">
+              <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" size={18} />
+              <Input
+                type="text"
+                placeholder="Search programs..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="pl-10 w-full"
+              />
+            </div>
+          </div>
+
           <div className="mb-12">
             <div className="flex flex-wrap items-center justify-center gap-3">
               {categories.map((category) => (
                 <button
                   key={category.value}
                   className={`rounded-full px-4 py-2 text-sm font-medium transition-colors ${
-                    category.value === 'all'
+                    category.value === activeCategory
                       ? 'bg-blue-600 text-white'
                       : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                   }`}
+                  onClick={() => setActiveCategory(category.value)}
                 >
                   {category.name}
                 </button>
@@ -195,13 +236,20 @@ const Programs = () => {
             </div>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 staggered-animation">
-            {trainingPrograms.map((program, index) => (
-              <div key={index} className="opacity-0 animate-zoom-in" style={{ animationDelay: `${index * 0.1}s` }}>
-                <ProgramCard {...program} />
-              </div>
-            ))}
-          </div>
+          {filteredPrograms.length === 0 ? (
+            <div className="text-center py-12">
+              <h3 className="text-xl font-semibold mb-2">No programs found</h3>
+              <p className="text-gray-600">Try adjusting your search or filter criteria</p>
+            </div>
+          ) : (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 staggered-animation">
+              {filteredPrograms.map((program, index) => (
+                <div key={index} className="opacity-0 animate-zoom-in" style={{ animationDelay: `${index * 0.1}s` }}>
+                  <ProgramCard {...program} />
+                </div>
+              ))}
+            </div>
+          )}
         </div>
       </section>
       
