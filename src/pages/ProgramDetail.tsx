@@ -135,6 +135,176 @@ const programsData = {
     fee: "₹18,500 per participant",
     institutionalDiscount: "Yes, 15% discount for groups of 6 or more from the same institution",
     image: "https://images.unsplash.com/photo-1574027632969-83a09c87f50c?auto=format&fit=crop&q=80&w=1740"
+  },
+  "digital-citizenship": {
+    title: "Digital Citizenship and Cyber Safety",
+    description: "Equipping teachers to model and teach responsible and safe online behavior, from digital footprints to cyberbullying response.",
+    duration: "2 days (16 hours)",
+    mode: ["In-person workshop", "Live virtual training", "Self-paced online course"],
+    outcomes: [
+      "Teach students about managing digital footprints and online reputation",
+      "Identify and effectively respond to cyberbullying situations",
+      "Implement online safety and security best practices in educational settings",
+      "Develop critical evaluation skills for identifying fake news and misinformation",
+      "Create integrated digital citizenship curriculum across subjects"
+    ],
+    whyTake: "As students spend more time online, educators must equip them with skills to navigate digital spaces responsibly and safely. This program provides practical strategies to help students become ethical, informed digital citizens while protecting them from online risks.",
+    fee: "₹16,000 per participant",
+    institutionalDiscount: "Yes, 15% discount for groups of 5 or more from the same institution",
+    image: "https://images.unsplash.com/photo-1563206767-5b18f218e8de?auto=format&fit=crop&q=80&w=1740"
+  },
+  "inclusive-education": {
+    title: "Inclusive Education and Technology",
+    description: "Using technology to cater to diverse learning needs and create equitable learning environments through assistive technologies and UDL principles.",
+    duration: "3 days (24 hours)",
+    mode: ["In-person workshop", "Live virtual training"],
+    outcomes: [
+      "Implement various assistive technologies to support students with disabilities",
+      "Utilize built-in accessibility features across different operating systems and platforms",
+      "Apply Universal Design for Learning principles using technology tools",
+      "Create differentiated instruction paths using digital tools",
+      "Support specific learning needs with targeted technology solutions"
+    ],
+    whyTake: "Every student deserves equal access to education. This program provides practical tools and strategies to create inclusive learning environments where all students can succeed, regardless of their learning differences or disabilities.",
+    fee: "₹18,000 per participant",
+    institutionalDiscount: "Yes, 20% discount for groups of 6 or more from the same institution",
+    image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&q=80&w=1764"
+  },
+  "blended-learning": {
+    title: "Blended Learning Strategies",
+    description: "Effectively combining face-to-face and online learning for enhanced flexibility and engagement through various blended learning models.",
+    duration: "3 days (24 hours)",
+    mode: ["In-person workshop", "Live virtual training"],
+    outcomes: [
+      "Implement different blended learning models appropriate for your context",
+      "Design engaging online learning components and materials",
+      "Select and integrate appropriate EdTech tools for blended environments",
+      "Manage classroom workflows across online and offline activities",
+      "Develop effective assessment strategies for blended learning"
+    ],
+    whyTake: "Blended learning combines the best of face-to-face instruction with online learning opportunities, providing flexibility and personalization. This approach is increasingly essential in modern education and helps prepare students for future learning and work environments.",
+    fee: "₹17,500 per participant",
+    institutionalDiscount: "Yes, 15% discount for groups of 5 or more from the same institution",
+    image: "https://images.unsplash.com/photo-1610484826967-09c5720778c7?auto=format&fit=crop&q=80&w=1740"
+  },
+  "assessment-tools": {
+    title: "Assessment Tools and Techniques",
+    description: "Leveraging technology for more efficient, effective, and insightful assessment through digital tools and platforms.",
+    duration: "2 days (16 hours)",
+    mode: ["Live virtual training", "Self-paced online course with mentorship"],
+    outcomes: [
+      "Use online platforms for efficient formative and summative assessment",
+      "Create and manage effective digital student portfolios",
+      "Implement digital rubrics and feedback tools to streamline evaluation",
+      "Facilitate meaningful peer and self-assessment using technology",
+      "Analyze assessment data to inform instructional decisions"
+    ],
+    whyTake: "Digital assessment tools can save time, provide faster feedback to students, and generate valuable data to inform teaching. This program equips you with practical skills to transform your assessment practice using accessible technology.",
+    fee: "₹16,000 per participant",
+    institutionalDiscount: "Yes, 15% discount for groups of 6 or more from the same institution",
+    image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=1740"
+  },
+  "online-content": {
+    title: "Creating Engaging Online Content",
+    description: "Designing dynamic and interactive digital learning materials that capture student interest using multimedia and instructional design principles.",
+    duration: "3 days (24 hours)",
+    mode: ["Live virtual training", "Self-paced online course"],
+    outcomes: [
+      "Create interactive presentations and digital lessons beyond static slides",
+      "Produce simple instructional videos and screencasts for student engagement",
+      "Integrate multimedia and interactive elements into digital learning materials",
+      "Apply instructional design principles to online content creation",
+      "Effectively locate and adapt Open Educational Resources for classroom use"
+    ],
+    whyTake: "Engaging digital content can transform student learning experiences and increase motivation. This program provides practical skills to create materials that capture attention, facilitate understanding, and make learning more interactive.",
+    fee: "₹17,000 per participant",
+    institutionalDiscount: "Yes, 15% discount for groups of 5 or more from the same institution",
+    image: "https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?auto=format&fit=crop&q=80&w=1740"
+  },
+  "data-driven": {
+    title: "Data-Driven Instruction",
+    description: "Using student data collected through technology to inform teaching practices, improve differentiation, and track progress.",
+    duration: "2 days (16 hours)",
+    mode: ["In-person workshop", "Live virtual training"],
+    outcomes: [
+      "Identify and utilize key data sources in digital learning environments",
+      "Efficiently collect and organize student data using digital tools",
+      "Analyze and visualize student data to identify patterns and trends",
+      "Implement data-informed differentiation and grouping strategies",
+      "Set and monitor learning goals based on data insights"
+    ],
+    whyTake: "Data-driven instruction enables more targeted, effective teaching tailored to student needs. This program provides practical tools to collect, analyze, and act on student data without feeling overwhelmed, leading to improved outcomes and more personalized learning.",
+    fee: "₹16,500 per participant",
+    institutionalDiscount: "Yes, 15% discount for groups of 6 or more from the same institution",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1740"
+  },
+  "teacher-wellness": {
+    title: "Teacher Wellness and Stress Management",
+    description: "Helping teachers manage workload and well-being in a technology-rich environment through digital organization and mindfulness practices.",
+    duration: "1 day (8 hours)",
+    mode: ["In-person workshop", "Live virtual training", "Self-paced online course"],
+    outcomes: [
+      "Implement effective strategies for managing digital communication overload",
+      "Utilize digital tools for time management and task prioritization",
+      "Leverage technology for automating repetitive teaching tasks",
+      "Practice digital detox and mindfulness techniques for educator wellbeing",
+      "Build supportive online professional learning networks"
+    ],
+    whyTake: "Teacher burnout is a growing concern, especially with increased technology demands. This program provides practical strategies to manage digital workload, reduce stress, and maintain wellbeing while leveraging technology to work smarter, not harder.",
+    fee: "₹12,000 per participant",
+    institutionalDiscount: "Yes, 20% discount for groups of 8 or more from the same institution",
+    image: "https://images.unsplash.com/photo-1604480133435-25b86862d276?auto=format&fit=crop&q=80&w=1740"
+  },
+  "computational-thinking": {
+    title: "Coding and Computational Thinking",
+    description: "Introducing foundational concepts of coding and computational thinking applicable across subjects, aligning with NEP guidelines.",
+    duration: "3 days (24 hours)",
+    mode: ["In-person workshop", "Live virtual training"],
+    outcomes: [
+      "Apply computational thinking concepts across different subject areas",
+      "Facilitate simple coding activities using block-based programming platforms",
+      "Implement 'unplugged' coding activities requiring minimal technology",
+      "Integrate computational thinking across various curriculum subjects",
+      "Introduce basic physical computing concepts using simple devices"
+    ],
+    whyTake: "Computational thinking is becoming an essential skill for all students, not just those interested in computer science. This program helps you integrate these concepts across subjects, fostering problem-solving skills while aligning with NEP 2020 recommendations.",
+    fee: "₹18,000 per participant",
+    institutionalDiscount: "Yes, 15% discount for groups of 5 or more from the same institution",
+    image: "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&q=80&w=1740"
+  },
+  "gamification": {
+    title: "Gamification in Education",
+    description: "Using game elements and mechanics to increase student motivation, engagement, and participation in the classroom.",
+    duration: "2 days (16 hours)",
+    mode: ["In-person workshop", "Live virtual training"],
+    outcomes: [
+      "Implement core game mechanics in educational contexts",
+      "Design engaging gamified learning activities and unit structures",
+      "Utilize digital platforms to manage gamification elements",
+      "Effectively use points, badges, and leaderboards to motivate learning",
+      "Create compelling narratives and challenges for classroom engagement"
+    ],
+    whyTake: "Gamification can transform student motivation and engagement by tapping into natural human interests in challenge, achievement, and play. This program provides practical strategies to gamify learning without sacrificing academic rigor.",
+    fee: "₹15,500 per participant",
+    institutionalDiscount: "Yes, 15% discount for groups of 6 or more from the same institution",
+    image: "https://images.unsplash.com/photo-1511213966740-24d719a0a814?auto=format&fit=crop&q=80&w=1740"
+  },
+  "presentation-skills": {
+    title: "Presentation Skills for Educators",
+    description: "Equipping educators with techniques to deliver engaging, confident, and memorable presentations that capture audience attention.",
+    duration: "2 days (16 hours)",
+    mode: ["In-person workshop", "Live virtual training"],
+    outcomes: [
+      "Structure presentations for maximum impact with strong openings and memorable conclusions",
+      "Master vocal variety and body language techniques for confident delivery",
+      "Design visually engaging presentation slides beyond standard bullet points",
+      "Implement interactive techniques and storytelling to maintain audience engagement",
+      "Confidently manage presentation anxiety and handle Q&A sessions effectively"
+    ],
+    whyTake: "Effective presentation skills are essential for educators in classrooms, staff meetings, and professional development. This program provides practical techniques to transform your presentations from ordinary to compelling, helping you better engage students and colleagues.",
+    fee: "₹16,000 per participant",
+    institutionalDiscount: "Yes, 15% discount for groups of 5 or more from the same institution",
+    image: "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&q=80&w=1740"
   }
 };
 

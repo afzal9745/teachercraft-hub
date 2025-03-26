@@ -8,7 +8,17 @@ import {
   Globe, 
   Users,
   School,
-  Lightbulb
+  Lightbulb,
+  Shield,
+  Heart,
+  LayoutGrid,
+  LineChart,
+  FileText,
+  BarChart,
+  Smile,
+  Code,
+  Gamepad2,
+  Presentation
 } from 'lucide-react';
 
 import { Navbar } from '@/components/Navbar';
@@ -73,6 +83,69 @@ const Programs = () => {
       icon: <Lightbulb size={24} />,
       slug: "adobe-creative"
     },
+    // New programs
+    {
+      title: "Digital Citizenship and Cyber Safety",
+      description: "Equipping teachers to model and teach responsible and safe online behavior, from digital footprints to cyberbullying response.",
+      icon: <Shield size={24} />,
+      slug: "digital-citizenship",
+      featured: true
+    },
+    {
+      title: "Inclusive Education and Technology",
+      description: "Using technology to cater to diverse learning needs and create equitable learning environments through assistive technologies and UDL principles.",
+      icon: <Heart size={24} />,
+      slug: "inclusive-education"
+    },
+    {
+      title: "Blended Learning Strategies",
+      description: "Effectively combining face-to-face and online learning for enhanced flexibility and engagement through various blended learning models.",
+      icon: <LayoutGrid size={24} />,
+      slug: "blended-learning"
+    },
+    {
+      title: "Assessment Tools and Techniques",
+      description: "Leveraging technology for more efficient, effective, and insightful assessment through digital tools and platforms.",
+      icon: <LineChart size={24} />,
+      slug: "assessment-tools" 
+    },
+    {
+      title: "Creating Engaging Online Content",
+      description: "Designing dynamic and interactive digital learning materials that capture student interest using multimedia and instructional design principles.",
+      icon: <FileText size={24} />,
+      slug: "online-content"
+    },
+    {
+      title: "Data-Driven Instruction",
+      description: "Using student data collected through technology to inform teaching practices, improve differentiation, and track progress.",
+      icon: <BarChart size={24} />,
+      slug: "data-driven"
+    },
+    {
+      title: "Teacher Wellness and Stress Management",
+      description: "Helping teachers manage workload and well-being in a technology-rich environment through digital organization and mindfulness practices.",
+      icon: <Smile size={24} />,
+      slug: "teacher-wellness"
+    },
+    {
+      title: "Coding and Computational Thinking",
+      description: "Introducing foundational concepts of coding and computational thinking applicable across subjects, aligning with NEP guidelines.",
+      icon: <Code size={24} />,
+      slug: "computational-thinking"
+    },
+    {
+      title: "Gamification in Education",
+      description: "Using game elements and mechanics to increase student motivation, engagement, and participation in the classroom.",
+      icon: <Gamepad2 size={24} />,
+      slug: "gamification"
+    },
+    {
+      title: "Presentation Skills for Educators",
+      description: "Equipping educators with techniques to deliver engaging, confident, and memorable presentations that capture audience attention.",
+      icon: <Presentation size={24} />,
+      slug: "presentation-skills",
+      featured: true
+    }
   ];
 
   // Category filters
@@ -81,6 +154,7 @@ const Programs = () => {
     { name: "Educational Innovation", value: "innovation" },
     { name: "Technology Integration", value: "technology" },
     { name: "Certification Preparation", value: "certification" },
+    { name: "Teacher Development", value: "development" },
   ];
 
   return (
